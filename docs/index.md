@@ -29,3 +29,7 @@ Dokumentasi masih terus ditambah. Perkiraan progress saat ini:
 ---
 
 Mulai dari [Memulai dengan K3s](tutorials/000-k3s-getting-started.md) kalau baru pertama kali pakai K3s.
+
+## Donasi
+
+Kalau panduan ini bermanfaat dan mau support pengembangan dokumentasi, bisa lewat **[Saweria](https://saweria.co/agung96tm)**. Terima kasih.
