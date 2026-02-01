@@ -1,8 +1,8 @@
-# Dideploy — Panduan K3s
+# Dideploy — K3s
 
-Panduan K3s: tutorial, how-to, dan referensi untuk menjalankan Kubernetes dengan K3s di server (bare metal / VPS).
+Tutorial, how-to, dan referensi untuk menjalankan Kubernetes dengan K3s di server (bare metal / VPS).
 
-## Isi panduan
+## Isi dokumentasi
 
 - **Tutorials** — Mulai dari nol: pasang K3s, konfigurasi kubectl, deploy contoh.
 - **How-to Guides** — Langkah praktis: cluster multi-node, MetalLB (LoadBalancer), dan lain-lain.

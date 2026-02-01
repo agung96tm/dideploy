@@ -1,6 +1,6 @@
-# Dideploy — Panduan K3s
+# Dideploy — K3s
 
-Panduan K3s untuk deploy Kubernetes di server (bare metal / VPS). Dokumentasi ini publik dan terbuka untuk kontribusi.
+Dokumentasi K3s untuk deploy Kubernetes di server (bare metal / VPS). Publik dan terbuka untuk kontribusi.
 
 ## Jalankan lokal
 

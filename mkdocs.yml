@@ -1,5 +1,5 @@
-site_name: Dideploy — Panduan K3s
-site_description: Panduan deploy Kubernetes dengan K3s ke server
+site_name: Dideploy — K3s
+site_description: Deploy Kubernetes dengan K3s ke server
 site_author: Agung
 
 theme:
