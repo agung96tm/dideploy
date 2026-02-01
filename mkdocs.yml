@@ -1,6 +1,7 @@
 site_name: Dideploy — K3s
 site_description: Deploy Kubernetes dengan K3s ke server
 site_author: Agung
+site_url: https://dideploy.agung96tm.com/
 
 theme:
   name: material
