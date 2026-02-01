@@ -1,0 +1,34 @@
+site_name: Dideploy K8s
+site_description: Tutorial Deploy K8s ke Server
+site_author: Agung
+
+theme:
+  name: material
+  language: id
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Tutorials:
+      - Getting Started: tutorials/getting-started.md
+  - How-to Guides:
+      - Deploy: how-to/deploy.md
+  - Reference:
+      - Configuration: reference/config.md
+  - Explanation:
+      - Architecture: explanation/architecture.md
