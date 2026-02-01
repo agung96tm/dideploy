@@ -5,6 +5,7 @@ site_author: Agung
 theme:
   name: material
   language: id
+  favicon: images/logo2.png
   palette:
     - scheme: default
       primary: indigo

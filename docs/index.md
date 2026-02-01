@@ -1,5 +1,9 @@
 # Dideploy — K3s
 
+<p style="text-align: center;">
+  <img src="images/logo.png" alt="Logo Dideploy K3s" width="260" />
+</p>
+
 Panduan K3s untuk jalankan Kubernetes di server sendiri (VPS atau bare metal) — dari pasang sampai storage, load balancer, dan ingress. Semua dalam Bahasa Indonesia.
 
 ## Kenapa ada situs ini?
