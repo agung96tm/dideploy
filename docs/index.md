@@ -1,17 +1,12 @@
-# Welcome to MkDocs
+# Dideploy — Panduan K3s
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Panduan K3s: tutorial, how-to, dan referensi untuk menjalankan Kubernetes dengan K3s di server (bare metal / VPS).
 
-## Commands
+## Isi panduan
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- **Tutorials** — Mulai dari nol: pasang K3s, konfigurasi kubectl, deploy contoh.
+- **How-to Guides** — Langkah praktis: cluster multi-node, MetalLB (LoadBalancer), dan lain-lain.
+- **Reference** — Acuan singkat: Traefik (Ingress K3s), konfigurasi.
+- **Explanation** — Penjelasan konsep dan arsitektur.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Mulai dari [Tutorial: K3s Memulai](tutorials/000-k3s-getting-started.md) jika Anda baru pertama kali pakai K3s.

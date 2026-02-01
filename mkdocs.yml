@@ -1,5 +1,5 @@
-site_name: Dideploy K8s
-site_description: Tutorial Deploy K8s ke Server
+site_name: Dideploy — Panduan K3s
+site_description: Panduan deploy Kubernetes dengan K3s ke server
 site_author: Agung
 
 theme:
@@ -21,14 +21,18 @@ theme:
 
 plugins:
   - search
+  - git-revision-date-localized:
+      type: date
 
 nav:
   - Home: index.md
   - Tutorials:
-      - Getting Started: tutorials/getting-started.md
+      - 000 - K3s Memulai: tutorials/000-k3s-getting-started.md
   - How-to Guides:
-      - Deploy: how-to/deploy.md
+      - 000 - K3s Multi-Node: how-to/000-k3s-multi-node.md
+      - 001 - MetalLB (LoadBalancer): how-to/001-metallb-loadbalancer.md
   - Reference:
-      - Configuration: reference/config.md
+      - 000 - Configuration: reference/000-config.md
+      - 001 - Traefik (Ingress K3s): reference/001-traefik.md
   - Explanation:
-      - Architecture: explanation/architecture.md
+      - 000 - Architecture: explanation/000-architecture.md

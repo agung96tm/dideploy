@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtualenv
+.venv/
+
+# MkDocs build output
+site/
+
+# OS junk
+.DS_Store
