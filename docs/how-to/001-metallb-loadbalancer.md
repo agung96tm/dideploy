@@ -6,7 +6,7 @@ MetalLB memberi Service tipe **LoadBalancer** alamat IP eksternal di cluster yan
 
 ## Kapan perlu MetalLB?
 
-**Tidak perlu** memasang MetalLB jika Anda memakai **managed Kubernetes** yang sudah menyediakan LoadBalancer:
+**Tidak perlu** memasang MetalLB jika kamu memakai **managed Kubernetes** yang sudah menyediakan LoadBalancer:
 
 - **DigitalOcean** (DOKS)
 - **Google GKE**, **AWS EKS**, **Azure AKS**
@@ -14,7 +14,7 @@ MetalLB memberi Service tipe **LoadBalancer** alamat IP eksternal di cluster yan
 
 Di layanan itu, `Service type: LoadBalancer` sudah otomatis dapat IP eksternal dari provider.
 
-**Perlu** MetalLB jika cluster Anda jalan di:
+**Perlu** MetalLB jika cluster kamu jalan di:
 
 - **Bare metal** (server fisik on-prem)
 - **VM / VPS** tanpa integrasi load balancer (misalnya K3s di VPS DigitalOcean/Linode tanpa pakai DO Load Balancer)
@@ -44,7 +44,7 @@ kubectl get pods -n metallb-system
 
 ## 3. Simpan config IP pool
 
-Buat file `metallb-pool.yaml` (ganti `178.128.91.208/32` dengan range IP yang boleh dipakai di jaringan Anda):
+Buat file `metallb-pool.yaml` (ganti `178.128.91.208/32` dengan range IP yang boleh dipakai di jaringan kamu):
 
 ```yaml
 # metallb-pool.yaml
@@ -107,7 +107,7 @@ NAME       TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)        AGE
 nginx-lb   LoadBalancer   10.43.x.x      178.128.91.208   80:xxxxx/TCP   xxs
 ```
 
-Akses via: `http://178.128.91.208` (atau IP yang Anda set di pool).
+Akses via: `http://178.128.91.208` (atau IP yang kamu set di pool).
 
 ---
 

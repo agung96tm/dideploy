@@ -2,13 +2,21 @@
 
 **Tujuan:** Memasang K3s di satu server, bisa menjalankan `kubectl` tanpa sudo, lalu mencoba deploy contoh (Nginx) dan menghapusnya lagi.
 
-Dalam tutorial ini Anda akan mempelajari langkah demi langkah: persiapan server, instalasi K3s, verifikasi, konfigurasi kubectl, dan contoh deploy Nginx sebagai tes cluster.
+Di sini kamu akan mengikuti langkah demi langkah: persiapan server, instalasi K3s, verifikasi, konfigurasi kubectl, dan contoh deploy Nginx sebagai tes cluster.
+
+---
+
+## Kenapa pakai K3s?
+
+K3s adalah distribusi Kubernetes yang **ringan** dan **sederhana** untuk dijalankan di satu server (VPS atau bare metal). Dibanding Kubernetes penuh (kubeadm, kubelet, banyak komponen), K3s cukup **satu binary**, resource (RAM/CPU) lebih kecil, dan instalasinya satu perintah. Cocok untuk **self-hosted**, **edge**, atau cluster kecil yang tidak butuh fitur enterprise.
+
+K3s tetap **kompatibel dengan API Kubernetes** — `kubectl`, Helm, dan manifest YAML yang dipakai di cluster lain bisa dipakai di sini. Jadi kalau kamu mau belajar Kubernetes atau menjalankan workload nyata (web app, database, dll.) di satu server dengan biaya minimal, K3s adalah pilihan yang masuk akal.
 
 ---
 
 ## Persiapan
 
-Pastikan Anda punya akses SSH ke server Linux (misalnya Ubuntu/Debian).
+Pastikan kamu punya akses SSH ke server Linux (misalnya Ubuntu/Debian).
 
 ### 1. Update sistem
 
@@ -43,7 +51,7 @@ Pastikan layanan K3s aktif:
 sudo systemctl status k3s
 ```
 
-Anda akan melihat status **active (running)** jika berhasil.
+Status yang tampil: **active (running)** jika berhasil.
 
 ---
 
@@ -57,7 +65,7 @@ Untuk sementara, gunakan `k3s kubectl`:
 sudo k3s kubectl get nodes
 ```
 
-Node Anda (biasanya satu) akan tampil dengan status **Ready**.
+Node (biasanya satu) akan tampil dengan status **Ready**.
 
 ### 5. Konfigurasi kubectl (tanpa sudo)
 
@@ -84,7 +92,7 @@ Jalankan:
 kubectl get pods -A
 ```
 
-Jika daftar namespace dan pod tampil (termasuk `kube-system`), cluster K3s Anda siap dipakai.
+Jika daftar namespace dan pod tampil (termasuk `kube-system`), cluster K3s kamu siap dipakai.
 
 **Catatan:** K3s sudah menyertakan [Traefik](../reference/001-traefik.md) sebagai Ingress controller bawaan. Untuk cek status atau konfigurasi Traefik, lihat referensi tersebut.
 
@@ -122,7 +130,7 @@ Catat port NodePort (angka setelah `80:`, misalnya `30007`).
 
 ### 9. Akses Nginx
 
-Ganti `IP_SERVER` dengan IP node/server Anda dan `30007` jika port Anda berbeda.
+Ganti `IP_SERVER` dengan IP node/server kamu dan `30007` jika port kamu berbeda.
 
 **Dari terminal (curl):**
 
@@ -154,7 +162,7 @@ Nginx dan Service-nya tidak lagi muncul di daftar.
 
 ## Ringkasan
 
-Anda telah:
+Yang sudah kamu lakukan:
 
 1. Memperbarui server dan memasang K3s
 2. Memverifikasi layanan K3s
@@ -163,6 +171,7 @@ Anda telah:
 
 **Langkah selanjutnya:**
 
+- **Persistent storage (Longhorn):** [Tutorial: Longhorn](001-longhorn.md) — setelah K3s jalan, pasang Longhorn agar cluster bisa dipakai untuk database atau aplikasi yang butuh data tetap (persistent volume) di self-hosted/VPS.
 - **Multi-node:** [How-to: Cluster K3s Multi-Node](../how-to/000-k3s-multi-node.md) — menambah worker node.
 - **LoadBalancer (bare metal/VPS):** [How-to: MetalLB](../how-to/001-metallb-loadbalancer.md) — agar Service tipe `LoadBalancer` mendapat IP eksternal tanpa cloud provider.
 - **Ingress:** [Reference: Traefik](../reference/001-traefik.md) — Ingress controller bawaan K3s, cek status dan konfigurasi.

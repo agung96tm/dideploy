@@ -33,7 +33,7 @@ Di server node, cek alamat IP yang dipakai worker untuk mengakses API (biasanya 
 ip a
 ```
 
-Contoh: `192.168.1.10`. Ganti dengan IP Anda di langkah worker.
+Contoh: `192.168.1.10`. Ganti dengan IP server kamu di langkah worker.
 
 ---
 
@@ -68,7 +68,7 @@ Tunggu sampai instalasi selesai. Layanan `k3s-agent` akan berjalan di worker.
 
 ## Langkah 3: Verifikasi
 
-Kembali ke **server node** (control-plane). Pastikan `KUBECONFIG` sudah di-set (lihat [Tutorial K3s](../tutorials/000-k3s-getting-started.md)), lalu:
+Kembali ke **server node** (control-plane). Pastikan `KUBECONFIG` sudah di-set (lihat [Memulai dengan K3s](../tutorials/000-k3s-getting-started.md)), lalu:
 
 ```bash
 kubectl get nodes
@@ -83,7 +83,7 @@ worker-1    Ready    <none>                  5m   v1.xx.x+k3s
 worker-2    Ready    <none>                  3m   v1.xx.x+k3s
 ```
 
-Semua node dengan status **Ready** berarti cluster multi-node Anda sudah berjalan.
+Semua node dengan status **Ready** berarti cluster multi-node kamu sudah berjalan.
 
 ---
 
