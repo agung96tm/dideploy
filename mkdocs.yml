@@ -31,10 +31,12 @@ nav:
   - Tutorials:
       - 000 - Memulai dengan K3s: tutorials/000-k3s-getting-started.md
       - 001 - Longhorn (Persistent Storage): tutorials/001-longhorn.md
+      - 002 - Let's Encrypt (cert-manager): tutorials/002-letsencrypt-cert-manager.md
   - How-to Guides:
       - 000 - K3s Multi-Node: how-to/000-k3s-multi-node.md
       - 001 - MetalLB (LoadBalancer): how-to/001-metallb-loadbalancer.md
       - 002 - Longhorn (Persistent Storage): how-to/002-longhorn.md
+      - 003 - Let's Encrypt (cert-manager): how-to/003-letsencrypt-cert-manager.md
   - Reference:
       - 000 - Traefik (Ingress K3s): reference/001-traefik.md
   - Explanation:
