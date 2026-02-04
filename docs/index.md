@@ -23,7 +23,7 @@ Dokumentasi masih terus ditambah. Perkiraan progress saat ini:
 
 **20%** — ████░░░░░░░░░░░░░░░░
 
-- Sudah: K3s getting started, Longhorn (tutorial + how-to), MetalLB, Traefik & config (referensi), Architecture (explanation).
+- Sudah: K3s getting started, Longhorn (tutorial + how-to), Let's Encrypt (tutorial + how-to), MetalLB, Traefik & config (referensi), Architecture (explanation).
 - Rencana: lebih banyak how-to, troubleshooting, contoh deploy app lengkap, dan penjelasan konsep.
 
 ---

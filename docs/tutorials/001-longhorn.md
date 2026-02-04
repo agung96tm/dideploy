@@ -71,6 +71,13 @@ kubectl patch storageclass longhorn \
   -p '{"metadata":{"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 ```
 
+Secara bawaan K3s masih punya `local-path` sebagai default. Supaya tidak ada dua StorageClass default sekaligus, jadikan `local-path` **false**:
+
+```bash
+kubectl patch storageclass local-path \
+  -p '{"metadata":{"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
+```
+
 Verifikasi:
 
 ```bash
@@ -80,8 +87,9 @@ kubectl get storageclass
 `longhorn` harus tampil dengan kolom **DEFAULT** bernilai `true`:
 
 ```
-NAME       PROVISIONER             RECLAIMPOLICY   VOLUMEBINDINGMODE   DEFAULT
-longhorn   driver.longhorn.io      Delete          Immediate           true
+NAME        PROVISIONER             RECLAIMPOLICY   VOLUMEBINDINGMODE   DEFAULT
+local-path  rancher.io/local-path   Delete          WaitForFirstConsumer false
+longhorn    driver.longhorn.io      Delete          Immediate           true
 ```
 
 ---
@@ -181,6 +189,7 @@ Yang sudah kamu lakukan:
 
 **Langkah selanjutnya:**
 
+- **Tutorial HTTPS:** [Let's Encrypt dengan cert-manager](002-letsencrypt-cert-manager.md) — pasang cert-manager dan aktifkan TLS di Ingress.
 - **How-to Longhorn:** [002 - Longhorn (Persistent Storage)](../how-to/002-longhorn.md) — referensi singkat yang sama, tanpa konteks tutorial.
 - **Multi-node:** [How-to: Cluster K3s Multi-Node](../how-to/000-k3s-multi-node.md) — menambah worker node.
 - **LoadBalancer:** [How-to: MetalLB](../how-to/001-metallb-loadbalancer.md) — Service tipe LoadBalancer di bare metal/VPS.
