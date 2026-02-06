@@ -1,8 +1,6 @@
 # How-to: Longhorn (Persistent Storage)
 
-Longhorn adalah sistem **persistent storage** berbasis block storage untuk Kubernetes. Longhorn membuat volume bisa dipakai ulang oleh Pod (misalnya data database atau file upload) dan cocok dipakai di cluster kecil maupun single-node (termasuk VPS).
-
-**Kapan dipakai:** saat aplikasi butuh penyimpanan yang tetap (persistent), misalnya database, cache, atau file yang harus tidak hilang saat Pod di-restart atau diganti.
+Panduan singkat memasang Longhorn sebagai StorageClass default di K3s.
 
 ---
 
