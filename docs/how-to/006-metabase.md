@@ -36,7 +36,7 @@ stringData:
   MB_DB_PASS: "ganti-password-db"
 ```
 
-## 3. Buat `metabase.yaml`
+## 3. Buat `metabase-postgres.yaml`
 
 ```yaml
 apiVersion: v1
@@ -113,6 +113,11 @@ spec:
   ports:
     - port: 5432
       targetPort: 5432
+```
+
+## 4. Buat `metabase.yaml`
+
+```yaml
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -229,6 +234,7 @@ Terapkan:
 
 ```bash
 kubectl apply -f metabase-secrets.yaml
+kubectl apply -f metabase-postgres.yaml
 kubectl apply -f metabase.yaml
 ```
 
