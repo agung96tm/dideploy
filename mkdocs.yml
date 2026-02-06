@@ -37,6 +37,10 @@ nav:
       - 001 - MetalLB (LoadBalancer): how-to/001-metallb-loadbalancer.md
       - 002 - Longhorn (Persistent Storage): how-to/002-longhorn.md
       - 003 - Let's Encrypt (cert-manager): how-to/003-letsencrypt-cert-manager.md
+      - 004 - Adminer: how-to/004-adminer.md
+      - 005 - GlitchTip: how-to/005-glitchtip.md
+      - 006 - Metabase: how-to/006-metabase.md
+      - 007 - WAHA: how-to/007-waha.md
   - Reference:
       - 000 - Traefik (Ingress K3s): reference/001-traefik.md
   - Explanation:
