@@ -57,9 +57,9 @@ Status yang tampil: **active (running)** jika berhasil.
 
 ## Menggunakan cluster
 
-### 4. Cek node dengan sudo
+### 4. Cek node (sementara pakai sudo)
 
-Untuk sementara, gunakan `k3s kubectl`:
+Sebelum `kubectl` siap tanpa `sudo`, gunakan `k3s kubectl`:
 
 ```bash
 sudo k3s kubectl get nodes
@@ -67,14 +67,21 @@ sudo k3s kubectl get nodes
 
 Node (biasanya satu) akan tampil dengan status **Ready**.
 
-### 5. Konfigurasi kubectl (tanpa sudo)
+### 5. Konfigurasi kubectl tanpa sudo
 
-Agar bisa memakai `kubectl` tanpa `sudo`:
+Salin kubeconfig K3s ke home user agar `kubectl` bisa dipakai tanpa `sudo`:
 
 ```bash
 mkdir -p ~/.kube
 sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 sudo chown $USER:$USER ~/.kube/config
+```
+
+### 6. Set KUBECONFIG (kubectl/Helm)
+
+Supaya `kubectl` dan Helm tahu cluster yang benar (dan tidak mencoba `localhost:8080`), arahkan `KUBECONFIG` ke file `~/.kube/config`:
+
+```bash
 export KUBECONFIG=~/.kube/config
 ```
 
@@ -84,7 +91,19 @@ Agar pengaturan ini tetap dipakai setiap kali login:
 echo 'export KUBECONFIG=~/.kube/config' >> ~/.bashrc
 ```
 
-### 6. Tes kubectl
+Jika ingin langsung aktif di sesi sekarang:
+
+```bash
+source ~/.bashrc
+```
+
+Kalau `KUBECONFIG` belum diarahkan, biasanya muncul error seperti ini saat install Helm:
+
+```
+Error: INSTALLATION FAILED: Kubernetes cluster unreachable: Get "http://localhost:8080/version": dial tcp [::1]:8080: connect: connection refused
+```
+
+### 7. Tes akses kubectl
 
 Jalankan:
 
@@ -102,7 +121,7 @@ Jika daftar namespace dan pod tampil (termasuk `kube-system`), cluster K3s kamu 
 
 Contoh singkat untuk memastikan cluster bisa menjalankan workload: deploy Nginx, cek akses, lalu hapus lagi.
 
-### 7. Deploy Nginx
+### 8. Deploy Nginx
 
 Buat Deployment dan Service tipe NodePort:
 
@@ -111,7 +130,7 @@ kubectl create deployment nginx --image=nginx
 kubectl expose deployment nginx --type=NodePort --port=80
 ```
 
-### 8. Cek Service
+### 9. Cek Service
 
 Lihat Service dan port NodePort:
 
@@ -128,7 +147,7 @@ nginx   NodePort   10.43.x.x    <none>        80:30007/TCP    xxs
 
 Catat port NodePort (angka setelah `80:`, misalnya `30007`).
 
-### 9. Akses Nginx
+### 10. Akses Nginx
 
 Ganti `IP_SERVER` dengan IP node/server kamu dan `30007` jika port kamu berbeda.
 
@@ -140,7 +159,7 @@ curl http://IP_SERVER:30007
 
 **Di browser:** buka `http://IP_SERVER:30007` — harus tampil halaman default Nginx (Welcome to nginx!).
 
-### 10. Uninstall Nginx (langkah berikutnya)
+### 11. Uninstall Nginx (langkah berikutnya)
 
 Setelah berhasil diakses, hapus Service dan Deployment:
 
