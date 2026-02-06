@@ -1,19 +1,16 @@
 # How-to: Cluster K3s Multi-Node
 
-**Tujuan:** Menambah worker node ke cluster K3s yang sudah ada (satu control-plane + N worker).
+Panduan singkat menambah worker node ke cluster K3s (1 control-plane + N worker).
 
-Prasyarat: K3s sudah terpasang di satu server sebagai **control-plane** (server node).
+## Prasyarat
 
----
-
-## Kebutuhan minimal
-
-- **1 server node** (control-plane) — sudah terpasang K3s
-- **N worker node** — mesin Linux yang akan bergabung sebagai agent
+- K3s sudah terpasang di satu server sebagai **control-plane**.
+- **1 server node** (control-plane) dan **N worker node** (Linux).
+- Akses SSH ke semua node.
 
 ---
 
-## Langkah 1: Di server node (control-plane)
+## 1. Di server node (control-plane)
 
 ### Ambil token join
 
@@ -37,7 +34,7 @@ Contoh: `192.168.1.10`. Ganti dengan IP server kamu di langkah worker.
 
 ---
 
-## Langkah 2: Di setiap worker node
+## 2. Di setiap worker node
 
 Di **setiap** mesin yang akan jadi worker:
 
@@ -66,7 +63,7 @@ Tunggu sampai instalasi selesai. Layanan `k3s-agent` akan berjalan di worker.
 
 ---
 
-## Langkah 3: Verifikasi
+## 3. Verifikasi
 
 Kembali ke **server node** (control-plane). Pastikan `KUBECONFIG` sudah di-set (lihat [Memulai dengan K3s](../tutorials/000-k3s-getting-started.md)), lalu:
 

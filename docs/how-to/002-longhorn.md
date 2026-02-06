@@ -1,4 +1,4 @@
-# Longhorn
+# How-to: Longhorn (Persistent Storage)
 
 Longhorn adalah sistem **persistent storage** berbasis block storage untuk Kubernetes. Longhorn membuat volume bisa dipakai ulang oleh Pod (misalnya data database atau file upload) dan cocok dipakai di cluster kecil maupun single-node (termasuk VPS).
 
@@ -6,7 +6,7 @@ Longhorn adalah sistem **persistent storage** berbasis block storage untuk Kuber
 
 ---
 
-## Persiapan
+## Prasyarat
 
 Sebelum instalasi:
 
@@ -22,7 +22,7 @@ df -h
 
 ---
 
-## Instalasi Longhorn
+## 1. Instalasi Longhorn
 
 Pasang Longhorn lewat manifest resmi:
 
@@ -34,7 +34,7 @@ Tunggu sampai semua komponen siap (bisa memakan beberapa menit).
 
 ---
 
-## Cek Pod Longhorn
+## 2. Cek Pod Longhorn
 
 Pastikan semua Pod di namespace `longhorn-system` berstatus **Running**:
 
@@ -54,7 +54,7 @@ longhorn-driver-xxx                      1/1     Running   0         5m
 
 ---
 
-## Jadikan Longhorn sebagai StorageClass default
+## 3. Jadikan Longhorn sebagai StorageClass default
 
 Agar PVC baru otomatis pakai Longhorn tanpa harus menyebut nama StorageClass:
 
@@ -78,7 +78,7 @@ longhorn   driver.longhorn.io      Delete          Immediate           true
 
 ---
 
-## Uji coba: membuat Persistent Volume
+## 4. Uji coba: membuat Persistent Volume
 
 ### 1. Buat PersistentVolumeClaim (PVC)
 
@@ -163,7 +163,7 @@ kubectl get pods
 
 ---
 
-## Kesimpulan
+## Ringkasan
 
 - **Longhorn bisa dipakai di VPS single-node** dan aman untuk dipakai di lingkungan kecil.
 - **Cocok untuk** database, cache, atau aplikasi lain yang butuh persistent storage.

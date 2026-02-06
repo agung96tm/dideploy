@@ -7,7 +7,9 @@ Panduan ringkas untuk menjalankan Adminer di K3s.
 - Ingress controller aktif (contoh: Traefik bawaan K3s).
 - Jika pakai TLS, ikuti [How-to: Let's Encrypt (cert-manager)](003-letsencrypt-cert-manager.md).
 
-**Catatan singkat:** jika nanti menambahkan kredensial ke Secret, jangan commit ke Git. Apply Secret dari mesin lokal yang aman atau lewat CI/CD secret.
+## Catatan keamanan
+
+Jika nanti menambahkan kredensial ke Secret, jangan commit ke Git. Apply Secret dari mesin lokal yang aman atau lewat CI/CD secret.
 
 ## 1. Buat namespace (sekali saja)
 

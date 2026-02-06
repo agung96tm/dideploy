@@ -20,6 +20,8 @@ kubectl get pods -n cert-manager
 
 ## 2. Buat ClusterIssuer
 
+Simpan sebagai `letsencrypt-issuer.yaml`:
+
 ```yaml
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -42,6 +44,8 @@ kubectl apply -f letsencrypt-issuer.yaml
 ```
 
 ## 3. Tambah TLS di Ingress
+
+Simpan sebagai `nginx-https.yaml`:
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -71,5 +75,10 @@ spec:
 
 ```bash
 kubectl apply -f nginx-https.yaml
+```
+
+## 4. Verifikasi sertifikat
+
+```bash
 kubectl get certificate
 ```

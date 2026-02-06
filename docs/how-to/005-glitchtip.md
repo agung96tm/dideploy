@@ -9,6 +9,10 @@ Contoh minimal GlitchTip di K3s. Contoh ini mengasumsikan PostgreSQL dan Redis s
 - Ingress controller aktif (contoh: Traefik bawaan K3s).
 - Jika pakai TLS, ikuti [How-to: Let's Encrypt (cert-manager)](003-letsencrypt-cert-manager.md).
 
+## Catatan keamanan
+
+Jangan commit `glitchtip-secrets.yaml` ke Git. Apply Secret dari mesin lokal yang aman atau lewat CI/CD secret.
+
 ## 1. Buat namespace (sekali saja)
 
 ```bash
@@ -29,8 +33,6 @@ stringData:
   DATABASE_URL: "postgres://user:password@postgres-host:5432/glitchtip"
   REDIS_URL: "redis://redis-host:6379/0"
 ```
-
-**Catatan singkat:** jangan commit `glitchtip-secrets.yaml` ke Git. Apply Secret dari mesin lokal yang aman atau lewat CI/CD secret.
 
 ## 3. Buat `glitchtip.yaml`
 

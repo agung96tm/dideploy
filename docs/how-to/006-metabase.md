@@ -8,6 +8,10 @@ Contoh manifest Metabase + PostgreSQL di K3s.
 - Ingress controller aktif (contoh: Traefik bawaan K3s).
 - Jika pakai TLS, ikuti [How-to: Let's Encrypt (cert-manager)](003-letsencrypt-cert-manager.md).
 
+## Catatan keamanan
+
+Jangan commit `metabase-secrets.yaml` ke Git. Apply Secret dari mesin lokal yang aman atau lewat CI/CD secret.
+
 ## 1. Buat namespace (sekali saja)
 
 ```bash
@@ -31,8 +35,6 @@ stringData:
   MB_DB_USER: "metabase"
   MB_DB_PASS: "ganti-password-db"
 ```
-
-**Catatan singkat:** jangan commit `metabase-secrets.yaml` ke Git. Apply Secret dari mesin lokal yang aman atau lewat CI/CD secret.
 
 ## 3. Buat `metabase.yaml`
 

@@ -8,6 +8,10 @@ Contoh manifest WAHA di K3s.
 - Ingress controller aktif (contoh: Traefik bawaan K3s).
 - Jika pakai TLS, ikuti [How-to: Let's Encrypt (cert-manager)](003-letsencrypt-cert-manager.md).
 
+## Catatan keamanan
+
+Jangan commit `waha-secrets.yaml` ke Git. Apply Secret dari mesin lokal yang aman atau lewat CI/CD secret.
+
 ## 1. Buat namespace (sekali saja)
 
 ```bash
@@ -31,8 +35,6 @@ stringData:
   WHATSAPP_SWAGGER_USERNAME: "admin"
   WHATSAPP_SWAGGER_PASSWORD: "ganti-password-swagger"
 ```
-
-**Catatan singkat:** jangan commit `waha-secrets.yaml` ke Git. Apply Secret dari mesin lokal yang aman atau lewat CI/CD secret.
 
 ## 3. Buat `waha.yaml`
 

@@ -24,6 +24,14 @@ Singkatnya: kalau buat Service `LoadBalancer` dan kolom EXTERNAL-IP tetap `<pend
 
 ---
 
+## Prasyarat
+
+- Cluster berjalan di bare metal/VPS (tanpa cloud load balancer).
+- `kubectl` sudah bisa akses cluster.
+- Punya IP pool yang bisa dipakai MetalLB.
+
+---
+
 ## 1. Install MetalLB
 
 ```bash
