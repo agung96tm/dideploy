@@ -30,8 +30,9 @@ nav:
   - Home: index.md
   - Tutorials:
       - Memulai dengan K3s: tutorials/000-k3s-getting-started.md
-      - Longhorn (Persistent Storage): tutorials/001-longhorn.md
-      - Let's Encrypt (cert-manager): tutorials/002-letsencrypt-cert-manager.md
+      - Helm: tutorials/001-helm.md
+      - Longhorn (Persistent Storage): tutorials/002-longhorn.md
+      - Let's Encrypt (cert-manager): tutorials/003-letsencrypt-cert-manager.md
   - How-to Guides:
       - K3s Multi-Node: how-to/000-k3s-multi-node.md
       - MetalLB (LoadBalancer): how-to/001-metallb-loadbalancer.md

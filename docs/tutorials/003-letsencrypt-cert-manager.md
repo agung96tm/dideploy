@@ -1,6 +1,6 @@
 # Tutorial: Let's Encrypt dengan cert-manager
 
-**Prasyarat:** Selesaikan dulu [Tutorial: Longhorn](001-longhorn.md). Pastikan `kubectl` bisa akses cluster dan Ingress controller aktif (default K3s: Traefik).
+**Prasyarat:** Selesaikan dulu [Tutorial: Longhorn](002-longhorn.md). Pastikan `kubectl` bisa akses cluster dan Ingress controller aktif (default K3s: Traefik).
 
 **Tujuan:** Memasang cert-manager, membuat `ClusterIssuer` Let's Encrypt, lalu mengaktifkan HTTPS pada Ingress.
 
@@ -137,5 +137,6 @@ Yang sudah kamu lakukan:
 
 **Langkah selanjutnya:**
 
+- **Tutorial Helm:** [Helm](001-helm.md) — install Helm untuk memudahkan instalasi aplikasi via chart.
 - **How-to Let's Encrypt:** [003 - Let's Encrypt (cert-manager)](../how-to/003-letsencrypt-cert-manager.md) — versi ringkas tanpa konteks tutorial.
 - **Reference Traefik:** [001 - Traefik (Ingress K3s)](../reference/001-traefik.md) — acuan konfigurasi Ingress.

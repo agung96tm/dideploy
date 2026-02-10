@@ -189,7 +189,8 @@ Yang sudah kamu lakukan:
 
 **Langkah selanjutnya:**
 
-- **Tutorial HTTPS:** [Let's Encrypt dengan cert-manager](002-letsencrypt-cert-manager.md) — pasang cert-manager dan aktifkan TLS di Ingress.
+- **Tutorial Helm:** [Helm](001-helm.md) — install Helm untuk memudahkan instalasi aplikasi via chart.
+- **Tutorial HTTPS:** [Let's Encrypt dengan cert-manager](003-letsencrypt-cert-manager.md) — pasang cert-manager dan aktifkan TLS di Ingress.
 - **How-to Longhorn:** [002 - Longhorn (Persistent Storage)](../how-to/002-longhorn.md) — referensi singkat yang sama, tanpa konteks tutorial.
 - **Multi-node:** [How-to: Cluster K3s Multi-Node](../how-to/000-k3s-multi-node.md) — menambah worker node.
 - **LoadBalancer:** [How-to: MetalLB](../how-to/001-metallb-loadbalancer.md) — Service tipe LoadBalancer di bare metal/VPS.
