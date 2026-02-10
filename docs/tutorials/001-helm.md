@@ -55,12 +55,31 @@ chmod +x /usr/local/bin/helm
 
 ## 4. Quick test
 
+1. Cari repo (harusnya kosong dulu):
+
 ```bash
-helm repo add bitnami https://charts.bitnami.com/bitnami
 helm search repo bitnami/nginx
 ```
 
-Jika hasil muncul, Helm sudah siap dipakai.
+2. Tambah repo:
+
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami
+```
+
+3. Cari lagi:
+
+```bash
+helm search repo bitnami/nginx
+```
+
+Jika hasil muncul, Helm sudah siap dan aman dipakai.
+
+4. Jika tidak ingin menyimpan repo test, hapus:
+
+```bash
+helm repo remove bitnami
+```
 
 ---
 
