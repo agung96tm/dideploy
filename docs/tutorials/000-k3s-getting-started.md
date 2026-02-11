@@ -194,4 +194,4 @@ Yang sudah kamu lakukan:
 - **Persistent storage (Longhorn):** [Tutorial: Longhorn](002-longhorn.md) — setelah K3s jalan, pasang Longhorn agar cluster bisa dipakai untuk database atau aplikasi yang butuh data tetap (persistent volume) di self-hosted/VPS.
 - **Multi-node:** [How-to: Cluster K3s Multi-Node](../how-to/000-k3s-multi-node.md) — menambah worker node.
 - **LoadBalancer (bare metal/VPS):** [How-to: MetalLB](../how-to/001-metallb-loadbalancer.md) — agar Service tipe `LoadBalancer` mendapat IP eksternal tanpa cloud provider.
-- **Ingress:** [Reference: Traefik](../reference/001-traefik.md) — Ingress controller bawaan K3s, cek status dan konfigurasi.
+- **Ingress controller:** [Tutorial: Ingress Controller (Traefik)](004-ingress-controller.md) — kenalan dengan Ingress dan Traefik bawaan K3s.

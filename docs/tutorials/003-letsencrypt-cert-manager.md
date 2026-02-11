@@ -138,5 +138,6 @@ Yang sudah kamu lakukan:
 **Langkah selanjutnya:**
 
 - **Tutorial Helm:** [Helm](001-helm.md) — install Helm untuk memudahkan instalasi aplikasi via chart.
+- **Ingress controller:** [Tutorial: Ingress Controller (Traefik)](004-ingress-controller.md) — kenalan dengan Ingress dan Traefik bawaan K3s.
 - **How-to Let's Encrypt:** [003 - Let's Encrypt (cert-manager)](../how-to/003-letsencrypt-cert-manager.md) — versi ringkas tanpa konteks tutorial.
 - **Reference Traefik:** [001 - Traefik (Ingress K3s)](../reference/001-traefik.md) — acuan konfigurasi Ingress.
