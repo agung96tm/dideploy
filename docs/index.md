@@ -21,7 +21,7 @@ Banyak yang mau jalankan Kubernetes di server sendiri (VPS atau bare metal) paka
 
 Dokumentasi masih terus ditambah. Perkiraan progress saat ini:
 
-**25%** — █████░░░░░░░░░░░░░░░
+**28%** — ██████░░░░░░░░░░░░░░
 
 
 ---
