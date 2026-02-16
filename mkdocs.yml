@@ -34,6 +34,7 @@ nav:
       - Longhorn (Persistent Storage): tutorials/002-longhorn.md
       - Let's Encrypt (cert-manager): tutorials/003-letsencrypt-cert-manager.md
       - Ingress Controller (Traefik): tutorials/004-ingress-controller.md
+      - Membuat Aplikasi (Express + DB + Redis): tutorials/005-start-app-express.md
   - How-to Guides:
       - K3s Multi-Node: how-to/000-k3s-multi-node.md
       - MetalLB (LoadBalancer): how-to/001-metallb-loadbalancer.md

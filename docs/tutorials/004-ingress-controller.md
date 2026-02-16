@@ -48,7 +48,7 @@ Domain/URL masuk ke Traefik, Traefik membaca aturan Ingress, lalu meneruskan ke 
 
 ## 1. Cek Traefik sudah jalan
 
-K3s sudah memasang Traefik sebagai Ingress controller bawaan. Cek statusnya:
+Cek statusnya dengan:
 
 ```bash
 kubectl get pods -n kube-system | grep traefik
@@ -68,6 +68,7 @@ Yang sudah kamu lakukan:
 
 **Langkah selanjutnya:**
 
+- **Tutorial membuat aplikasi:** [Membuat Aplikasi (Express + DB + Redis)](005-start-app-express.md) — siapkan aplikasi sebelum dipasang Ingress dan domain.
 - **Tutorial domain & Ingress:** ikuti tutorial domain berikutnya untuk membuat Ingress aplikasi dan mengatur DNS.
 - **Tutorial HTTPS:** [Let's Encrypt dengan cert-manager](003-letsencrypt-cert-manager.md) — menambahkan TLS pada Ingress.
 - **Reference Traefik:** [Traefik (Ingress K3s)](../reference/001-traefik.md) — detail konfigurasi Traefik.
