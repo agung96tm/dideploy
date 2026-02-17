@@ -318,5 +318,5 @@ Yang sudah kamu lakukan:
 
 **Langkah selanjutnya:**
 
-- **Tutorial deploy ke K3s:** lanjut ke tutorial deployment aplikasi (akan dibahas di langkah berikutnya).
+- **Push image ke Docker Hub:** [Tutorial: Push Image ke Docker Hub](006-hub-docker-and-push-image.md) — agar image bisa dipakai di Kubernetes.
 - **Tutorial Ingress Controller:** [Ingress Controller (Traefik)](004-ingress-controller.md) — pahami alur Ingress sebelum pasang domain.

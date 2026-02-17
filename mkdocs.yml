@@ -35,6 +35,7 @@ nav:
       - Let's Encrypt (cert-manager): tutorials/003-letsencrypt-cert-manager.md
       - Ingress Controller (Traefik): tutorials/004-ingress-controller.md
       - Membuat Aplikasi (Express + DB + Redis): tutorials/005-start-app-express.md
+      - Push Image ke Docker Hub: tutorials/006-hub-docker-and-push-image.md
   - How-to Guides:
       - K3s Multi-Node: how-to/000-k3s-multi-node.md
       - MetalLB (LoadBalancer): how-to/001-metallb-loadbalancer.md
@@ -44,6 +45,7 @@ nav:
       - GlitchTip: how-to/005-glitchtip.md
       - Metabase: how-to/006-metabase.md
       - WAHA: how-to/007-waha.md
+      - Harbor: how-to/008-harbor.md
   - Reference:
       - Traefik (Ingress K3s): reference/001-traefik.md
   - Explanation:
