@@ -72,5 +72,6 @@ Yang sudah kamu lakukan:
 Tahap ini selesai, lanjut ke proses deploy di Kubernetes.
 
 **Langkah selanjutnya:**
-- WIP
+
+- **Deploy app dengan file K8s:** [Tutorial: Deploy App Express dengan File K8s](007-app-express-with-k8s-files.md)
 - **Registry private:** [How-to: Harbor](../how-to/008-harbor.md) — opsi registry private selain Docker Hub.

@@ -36,6 +36,7 @@ nav:
       - Ingress Controller (Traefik): tutorials/004-ingress-controller.md
       - Membuat Aplikasi (Express + DB + Redis): tutorials/005-start-app-express.md
       - Push Image ke Docker Hub: tutorials/006-hub-docker-and-push-image.md
+      - Deploy App Express dengan File K8s: tutorials/007-app-express-with-k8s-files.md
   - How-to Guides:
       - K3s Multi-Node: how-to/000-k3s-multi-node.md
       - MetalLB (LoadBalancer): how-to/001-metallb-loadbalancer.md
